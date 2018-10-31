@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+		<body>
+
+			<trans-unit id="identity_identity">
+				<source>identity.identity</source>
+				<target>Identity</target>
+			</trans-unit>
+
+			<trans-unit id="catalog_users">
+				<source>catalog.users</source>
+				<target>Users</target>
+			</trans-unit>
+
+			<!-- Component Titles -->
+			<trans-unit id="identity_title_myacccount">
+				<source>identity.title.myaccount</source>
+				<target>My Account</target>
+			</trans-unit>
+			<trans-unit id="identity_title_user">
+				<source>identity.title.user</source>
+				<target>User Details</target>
+			</trans-unit>
+
+			<!-- General Navigation -->
+			<trans-unit id="identity_go_register">
+				<source>identity.go.register</source>
+				<target>Register</target>
+			</trans-unit>
+
+			<trans-unit id="identity_go_back_to_login">
+				<source>identity.go.back_to_login</source>
+				<target>Back to Login</target>
+			</trans-unit>
+
+			<trans-unit id="identity_go_recover">
+				<source>identity.go.recover</source>
+				<target>Lost Password?</target>
+			</trans-unit>
+
+			<!-- Labels -->
+			<trans-unit id="identity_label_remember_me">
+				<source>identity.label.remember_me</source>
+				<target>Keep me signed in</target>
+			</trans-unit>
+			<trans-unit id="identity_label_login">
+				<source>identity.label.login</source>
+				<target>Sign In</target>
+			</trans-unit>
+			<trans-unit id="identity_label_send">
+				<source>identity.label.send</source>
+				<target>Send</target>
+			</trans-unit>
+			<trans-unit id="identity_label_username_or_email">
+				<source>identity.label.username_or_email</source>
+				<target>Username or Email</target>
+			</trans-unit>
+			<trans-unit id="identity_label_resend_rsvp">
+				<source>identity.label.resend_rsvp</source>
+				<target>Resend</target>
+			</trans-unit>
+
+
+			<!-- Password Recovery -->
+			<trans-unit id="identity_reset_password">
+				<source>identity.reset_password</source>
+				<target>Reset Password</target>
+			</trans-unit>
+			<trans-unit id="identity_reset_request_instruction">
+				<source>identity.reset_request_instruction</source>
+				<target>Enter your username or email address to receive an email with instructions to reset your password.</target>
+			</trans-unit>
+			<trans-unit id="identity_reset_request_info">
+				<source>identity.reset_request_info</source>
+				<target>If you have not received an email within a few minutes, please check your spam or junk folder for an email from %EMAIL_ADDRESS%.</target>
+			</trans-unit>
+			<trans-unit id="identity_rsvp_sent_info">
+				<source>identity.rsvp_sent_info</source>
+				<target>Your password reset instructions are on their way to your inbox. Please allow a couple minutes to receive the email message.</target>
+			</trans-unit>
+			<trans-unit id="identity_message_recover_request_success">
+				<source>identity.message.recover_request.success</source>
+				<target>Instructions to reset your password have been sent.</target>
+			</trans-unit>
+			<trans-unit id="identity_message_recover_request_invalid">
+				<source>identity.message.recover_request.invalid</source>
+				<target>Please enter your username or email address.</target>
+			</trans-unit>
+			<trans-unit id="identity_enter_new_password">
+				<source>identity.enter_new_password</source>
+				<target>create a new password, %user_name%</target>
+			</trans-unit>
+			<trans-unit id="identity_label_new_password">
+				<source>identity.label.new_password</source>
+				<target>new password</target>
+			</trans-unit>
+			<trans-unit id="identity_label_re_password">
+				<source>identity.label.re_password</source>
+				<target>retype password</target>
+			</trans-unit>
+			<trans-unit id="identity_label_save_password">
+				<source>identity.label.save_password</source>
+				<target>save password</target>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

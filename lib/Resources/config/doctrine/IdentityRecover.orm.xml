@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+	<entity name="ZealByte\Identity\Entity\IdentityRecover" table="identity_recover">
+
+    <id name="id" type="binary" column="id">
+      <options>
+        <option name="length">16</option>
+        <option name="fixed"/>
+      </options>
+    </id>
+
+    <field name="userId" type="string" column="user_id" length="36" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+		</field>
+
+    <field name="key" type="string" column="key_id" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+		</field>
+
+    <field name="code" type="string" column="code" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+		</field>
+
+    <field name="attempts" type="smallint" column="attempts" nullable="false">
+      <options>
+        <option name="unsigned">1</option>
+        <option name="default">0</option>
+      </options>
+    </field>
+
+    <field name="revoked" type="boolean" column="is_revoked" nullable="false">
+      <options>
+        <option name="default">0</option>
+      </options>
+    </field>
+
+    <field name="status" type="string" column="status" length="36" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+		</field>
+
+    <field name="dateRequested" type="datetime" column="date_requested" nullable="false">
+      <options>
+        <option name="default">1970-01-01 00:00:00</option>
+      </options>
+		</field>
+
+  </entity>
+</doctrine-mapping>

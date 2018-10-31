@@ -1,0 +1,92 @@
+{% extends '@Platform/components.html.twig' %}
+
+{% block account_container %}
+<h1 class="uk-heading-primary uk-margin-remove-top">{{ 'identity.title.myaccount' | trans }}</h1>
+{{ block('container_grid_masonry') }}
+{% endblock account_container %}
+
+
+{% block form_login %}
+{{ block('form_stacked_component') }}
+{% if show_registration_link | default(false) %}
+<hr>
+<a href="{{ path(constant('ZealByte\\Identity\\ZealByteIdentity::ROUTE_REGISTER')) }}">{{ 'identity.go.register' | trans }}</a>
+{% endif %}
+{% endblock form_login %}
+
+
+{% block user_all %}
+{# {% title user.username %} #}
+{% package 'images' %}
+<div class="uk-grid-small uk-flex-middle" uk-grid>
+	<div class="uk-width-auto">
+		<img class="uk-border-rounded" width="60" height="60" src="{{ asset('demo/user-2.jpg', 'images') }}">
+	</div>
+	<div class="uk-width-expand">
+		<h3 class="uk-card-title uk-margin-remove-bottom">{{ user.name | default('Anon') }}</h3>
+		<p class="uk-text-meta uk-margin-remove-top">{{ user.email | default('anon@.com') }}</p>
+	</div>
+</div>
+{% endblock user_all %}
+
+
+{% block recover_component %}
+{% title 'identity.reset_password' | trans %}
+{% if form is defined %}
+	{{ form(form, {'attr': {'novalidate': 'novalidate', 'class': 'uk-form-stacked'}}) }}
+{% endif %}
+<a class="card-link" href="{{ path(constant('ZealByte\\Identity\\ZealByteIdentity::ROUTE_LOGIN')) }}">{{ 'identity.go.back_to_login' | trans }}</a>
+<hr>
+<p class="uk-text-meta">{{ 'identity.reset_request_info' | trans({'%EMAIL_ADDRESS%': from_email_address }) | raw }}</p>
+{% endblock recover_component %}
+
+
+{% block register_component %}
+	{% title 'security.register' | trans %}
+	{{ form_start(form, {'attr': {'novalidate': 'novalidate', 'class': 'form p-3'}}) }}
+		{{ form_row(form.name) }}
+		{{ form_row(form.email) }}
+
+		<hr>
+
+		{% if username_required %}
+			{{ form_row(form.username) }}
+		{% endif %}
+
+		{{ form_row(form.password) }}
+
+		<div class="form-group row d-flex justify-content-between">
+			{{ form_widget(form.register, {'attr': {'class': 'btn-primary'}}) }}
+			<a class="card-link" href="{{ path(constant('ZealByte\\Identity\\ZealByteIdentity::ROUTE_LOGIN')) }}">{{ 'auth.back_to_login' | trans }}</a>
+		</div>
+	{{ form_end(form) }}
+{% endblock register_component %}
+
+
+{% block reset_password_form %}
+{% title 'identity.reset_password' | trans %}
+
+<h1>{{ 'identity.enter_new_password' | trans({'%USER_NAME%': user.displayName}) }}</h1>
+
+<form class="form-horizontal" method="POST">
+	<div class="form-group">
+		<label class="col-sm-2 control-label" for="input-password">{{ 'identity.label.new_password' | trans }}</label>
+		<div class="col-sm-8">
+			<input class="form-control" name="password" type="password" id="input-password" required placeholder="Password">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-sm-2 control-label" for="input-confirm-password">{{ 'identity.label.re_password' | trans }}</label>
+		<div class="col-sm-8">
+			<input class="form-control" name="confirm_password" type="password" id="input-confirm-password" required placeholder="Re-type password">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-8 col-sm-offset-2">
+			<button type="submit" class="btn btn-primary">{{ 'identity.label.save_password' | trans }}</button>
+		</div>
+	</div>
+</form>
+{% endblock reset_password_form %}

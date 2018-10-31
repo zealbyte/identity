@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+		<body>
+
+			<trans-unit id="identity_identity">
+				<source>identity.identity</source>
+				<target>Identidad</target>
+			</trans-unit>
+
+			<trans-unit id="catalog_users">
+				<source>catalog.users</source>
+				<target>Usuarios</target>
+			</trans-unit>
+
+			<!-- Component Titles -->
+			<trans-unit id="identity_title_myacccount">
+				<source>identity.title.myaccount</source>
+				<target>Mi Cuenta</target>
+			</trans-unit>
+			<trans-unit id="identity_title_user">
+				<source>identity.title.user</source>
+				<target>Detalles de usuario</target>
+			</trans-unit>
+
+			<!-- General Navigation -->
+			<trans-unit id="identity_go_register">
+				<source>identity.go.register</source>
+				<target>Registro</target>
+			</trans-unit>
+
+			<trans-unit id="identity_go_back_to_login">
+				<source>identity.go.back_to_login</source>
+				<target>Atrás para iniciar sesión</target>
+			</trans-unit>
+
+			<trans-unit id="identity_go_recover">
+				<source>identity.go.recover</source>
+				<target>¿Contraseña perdida?</target>
+			</trans-unit>
+
+			<!-- Labels -->
+			<trans-unit id="identity_label_remember_me">
+				<source>identity.label.remember_me</source>
+				<target>Mantenerme conectado</target>
+			</trans-unit>
+
+
+			<!-- Password Recovery -->
+			<trans-unit id="identity_reset_password">
+				<source>identity.reset_password</source>
+				<target>Restablecer la contraseña</target>
+			</trans-unit>
+			<trans-unit id="identity_reset_request_instruction">
+				<source>identity.reset_request_instruction</source>
+				<target>Ingrese su nombre de usuario o dirección de correo electrónico para recibir un correo electrónico con instrucciones para restablecer su contraseña.</target>
+			</trans-unit>
+			<trans-unit id="identity_reset_request_info">
+				<source>identity.reset_request_info</source>
+				<target>Si no ha recibido un correo electrónico dentro de unos minutos, revise su carpeta de spam o correo no deseado para obtener un correo electrónico de %EMAIL_ADDRESS%.</target>
+			</trans-unit>
+			<trans-unit id="identity_enter_new_password">
+				<source>identity.enter_new_password</source>
+				<target>Crea una nueva contraseña, %USER_NAME%</target>
+			</trans-unit>
+			<trans-unit id="identity_label_new_password">
+				<source>identity.label.new_password</source>
+				<target>Nueva contraseña</target>
+			</trans-unit>
+			<trans-unit id="identity_label_re_password">
+				<source>identity.label.re_password</source>
+				<target>Vuelva a escribir la contraseña</target>
+			</trans-unit>
+			<trans-unit id="identity_label_save_password">
+				<source>identity.label.save_password</source>
+				<target>Guardar contraseña</target>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>
