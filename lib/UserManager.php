@@ -255,10 +255,13 @@ namespace ZealByte\Identity
 				if (array_key_exists($userData[$this->getUserColumns('id')], $this->identityMap)) {
 					$user = $this->identityMap[$userData[$this->getUserColumns('id')]];
 				} else {
+					$id = (string) $userData[$this->getUserColumns('id')];
 					$userClass = $this->getUserClass();
+					$userItem = $this->getUserItem($id);
+
 					$user = new $userClass();
 
-					$this->hydrateUser($user, $userData);
+					$this->hydrateUser($user, $userItem, true);
 					$this->identityMap[$user->getId()] = $user;
 				}
 
